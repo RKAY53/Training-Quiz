@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lean Six Sigma Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container box">
+        <!-- Introduction Section -->
+        <div id="intro" class="section">
+            <h1>Welcome to the Lean Six Sigma Quiz</h1>
+            <p>Test your knowledge of Lean Six Sigma principles and improve your understanding.</p>
+            <label for="participantName">Enter your name to start:</label>
+            <input type="text" id="participantName" placeholder="Your Name">
+            <div class="button-group">
+                <button class="btn primary" onclick="startQuiz()">Start Quiz</button>
+                <button class="btn secondary" onclick="restartQuiz()">Reset Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Questionnaire Section -->
+        <div id="questionnaire" class="hidden section">
+            <h1 id="mainHeader"></h1>
+            <div id="level1" class="quiz-level"></div>
+            <div id="level2" class="quiz-level"></div>
+            <div id="level3" class="quiz-level"></div>
+
+            <div id="result"></div>
+            <div class="button-group">
+                <button id="submitButton" class="btn primary" onclick="submitQuiz()">Submit Quiz</button>
+                <button id="nextLevelButton" class="btn primary hidden" onclick="nextLevel()">Proceed to Next Level</button>
+                <button id="restartButton" class="btn secondary hidden" onclick="restartQuiz()">Restart Quiz</button>
+                <button id="finishButton" class="btn primary hidden" onclick="displayFinalScore()">Finish Quiz</button>
+                <button id="resetButton" class="btn secondary" onclick="returnToMain()">Return to Main Page</button>
+            </div>
+        </div>
+
+        <!-- Thank You Page -->
+        <div id="thankYouPage" class="hidden section">
+            <h1>Thank you, <span id="participantThankYou"></span>!</h1>
+            <div id="feedback"></div>
+            <label for="email">Enter your email to send your results:</label>
+            <input type="email" id="email" placeholder="Your Email">
+            <div class="button-group">
+                <button id="sendButton" class="btn primary" onclick="sendEmail()">Send Results</button>
+                <button id="leaveButton" class="btn secondary" onclick="leaveQuiz()">Leave</button>
+            </div>
+        </div>
+
+        <!-- Goodbye Page -->
+        <div id="goodbyePage" class="hidden section">
+            <h1>Thank you for participating!</h1>
+            <p>We hope you had a great learning experience! Keep practicing and improving your skills. See you soon for another challenge!</p>
+            <button id="returnToMain" class="btn primary" onclick="returnToMain()">Return to Main Page</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
